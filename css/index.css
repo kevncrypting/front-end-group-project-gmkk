@@ -1,3 +1,16 @@
+.row {
+width: 100%;
+background-color: #FB9300;
+}
+
+.cards{ 
+width: 50px;
+height: 100px;
+border: solid 5px #F54748; 
+/* INNER TEXT #LOREM */
+}
+
+/* random stock photo */
 /* 
 rgb(245, 230, 202) - background color (tan)
 rgb(251, 147, 0) - accent #1 (orange)
