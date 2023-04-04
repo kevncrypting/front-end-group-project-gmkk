@@ -11,3 +11,58 @@ border: solid 5px #F54748;
 }
 
 /* random stock photo */
+/* 
+rgb(245, 230, 202) - background color (tan)
+rgb(251, 147, 0) - accent #1 (orange)
+rgb(245, 71, 72) - accent #2 (red)
+rgb(52, 63, 86) - main text color (dark blue)
+*/
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: rgb(245, 230, 202);
+    color: rgb(52, 63, 86);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(251, 147, 0, .5);
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Righteous', cursive;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    background-color: rgb(245, 71, 72);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.btn-quiz {
+    font-size: 1rem;
+}
+
+#hero {
+    display: flex;
+}
+
+img {
+    width: min(300px, 50%);
+    border-radius: 10px;
+}
+
+section {
+    background-color: rgba(52, 63, 86, .2);
+    padding: 20px;
+    margin-top: 10px;
+}
