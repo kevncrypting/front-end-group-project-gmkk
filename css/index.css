@@ -1,14 +1,13 @@
-.row
-width 100%
+.row {
+width: 100%
 backround color: #FB9300
+}
 
-.cards 
+.cards{ 
 width: 50px;
 height: 100px;
-border 5px, color: #F54748; 
+border: solid 5px #F54748; 
 /* INNER TEXT #LOREM */
+}
 
-.person {
-    img src = (https://www.facebook.com/photo.php?fbid=10152392216755694&set=t.1349821742&type=3)
-    }
-    
+/* random stock photo */
