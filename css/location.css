@@ -1,0 +1,29 @@
+.main-display {
+    display: flex;
+
+}
+.sidebox {
+    height: 250px;
+    width: 250px;
+    background-color:  blanchedalmond;
+}
+
+body {
+  margin: 40px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
