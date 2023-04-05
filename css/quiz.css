@@ -1,0 +1,13 @@
+h3 {
+    background-color: red;
+}
+
+.questions, .choice {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.choice {
+    background-color: blue;
+}
