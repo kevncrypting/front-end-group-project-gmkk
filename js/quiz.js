@@ -10,12 +10,6 @@ let geography = document.getElementById('geography').value;
 
 questionsArray.push(climate.value, continent.value, geography.value)
 
-function getUserInput() {
-    btn1.addEventListener("click", function () {
-        climate.value
-        document.getElementById('questions').innerHTML = climate + " " + continent + " " + geography;
-    })
-}
 
 function data() {
     btn1.addEventListener("click", function () {
