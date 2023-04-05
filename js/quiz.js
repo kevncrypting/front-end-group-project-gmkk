@@ -1,16 +1,4 @@
-let answerContainer = document.getElementById('answer-boxs')
-let onClick = document.querySelector('onclick')
-
-let firstButton = doucument.getElementById('one')
-let secondButton = doucument.getElementById('two')
-let thirdButton = doucument.getElementById('three')
-let fourthButton = doucument.getElementById('four')
-
-let answers = []
-
-
-function quiz (){
-    answerContainer.addEventListener('click', function() {
-
-    })
+document.getElementById("myButton").onclick = function(){
+    let myName = document.getElementById("myText").value;
+    console.log("hello", myName)
 }
