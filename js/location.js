@@ -32,11 +32,42 @@ function getCityData(city, apiKey) { // found this function in a tutorial on the
         });
 }
 
+let categoryContainer = document.getElementById('category-container')
+
+let entertainmentSection = document.getElementById('entertainment')
+let accommodationSection = document.getElementById('accommodation')
+let cateringSection = document.getElementById('catering')
+
 let getCategory = (category) => { // created this function and substituted areas in fetch URL with variables that accomplish what we are looking to populate on the page
     fetch(`https://api.geoapify.com/v2/places?categories=${category}&filter=place:${cityPlaceID}&limit=5&apiKey=${API_TOKEN}`)
         .then(data => data.json())
         .then(result => {
-            console.log(result) // this is probably where you need to change some functionality to instead access the results properties - maybe creating an empty array forEach result and pushing the property values we want into it, then createElement a container of sorts to populate with this data, then appending that container to the respective category sections on the page
+            let categorySection = document.createElement('div'); // creates a variable called categorySection that references a div element
+            let categoryUnorderedList = document.createElement('ul');
+
+            let namesArray = []; // creates an empty array that will be populated with the names of the following forEach
+            
+            result.features.forEach(result => { // accessing the features property of each result, then pushing the name property into the namesArray
+                namesArray.push(result.properties.name)
+            })
+
+            namesArray.forEach(name => {
+                let nameListItem = document.createElement('li');
+                nameListItem.innerHTML = name;
+                categoryUnorderedList.appendChild(nameListItem);
+            })
+
+            categorySection.appendChild(categoryUnorderedList);
+
+            if (category == 'accommodation') {
+                accommodationSection.appendChild(categorySection);
+            } else if (category == 'entertainment') {
+                entertainmentSection.appendChild(categorySection);
+            } else if (category == 'catering') {
+                cateringSection.appendChild(categorySection);
+            }
+
+            // this is probably where you need to change some functionality to instead access the results properties - maybe creating an empty array forEach result and pushing the property values we want into it, then createElement a container of sorts to populate with this data, then appending that container to the respective category sections on the page
         })
 }
 
