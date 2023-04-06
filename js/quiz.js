@@ -6,32 +6,34 @@ let locations = [
     {
         location: "Snake Island, Brazil",
         description: "Considered as one of the deadliest places, Snake Island in Brazil is definitely one of the most dangerous places on Earth. 90 miles from the city of Sao Paulo, this super deadly island is home to the largest concentrated population of snakes in the world. According to research, Snake Island aka Ilha da Queimada Grande has about five snakes per square meter. It is said that snakes on this Brazilian island are so venomous that they can melt human flesh. This island is the only place in the world where the golden lancehead viper is found and the most venomous snake in the world, the Bothrops thrives. Due to the extremely high risk for tourists and black market demand for lancehead venom, the Brazilian government has strictly prohibited visits to Ilha da Queimada Grande.",
-        hotels: []
-        attractions: []
-        food: []
+        hotels: ["Serpiente Motel", "Hilton Head"],
+        attractions: ["Serp Swimming", "Cave Diving"],
+        food: ["Local Fisherman Fish of the day", "Snake Soup"]
     },
     {
         location: "Danakil Desert, Ethiopia",
         description: "The hottest place on earth, the Danakil Desert in Ethiopia is one of the driest and lowest places on the planet that looks like an alien land. One can witness volcanoes oozing out lava, multiple hues of hydrothermal fields, and massive salt pans that leave you stupefied. Covered with more than 10 lakh tonnes of salt, this deadly desert lies at the northern end of the Great Rift Valley that is separated by live volcanoes from the Red Sea. Exploring this hair-raising region requires driving for hours on bumpy, dusty dirt roads that begin starting from Mekele. The barren land is home to many active volcanoes that spew toxic gases.",
-        hotels: []
-        attractions: []
-        food: []
+        hotels: ["Doho Lodge & Hot Springs","Kuriftu Resort & Spa Awash Falls"],
+        attractions: ["3 Days Danakil Depression Tour","Dalol tours"],
+        food: ["Kategna Restaurant","The Kitchen"],
     },
     {
         location: "Lionsmane Village, Lionmania",
         description: "The Utopia",
-        hotels: []
-        attractions: []
-        food: []
+        hotels: ["Mushroom Hotel","Luigi Mansion"],
+        attractions: ["Road to Nueroplasticity","My affiliate link"],
+        food: ["Lionsmane Burger","Lionsmane Chicken Nuggets"],
     },
     {
         location: "27.486786, -175.930167",
         description: "Are you ready, kids. Aye aye Captain. I can't hear you. Aye aye Captain. Ohhhh Who lives in a pineapple under the sea. SpongeBob SquarePants. Absorbant and yellow and porous is he. SpongeBob SquarePants. If nautical nonsense be something you wish. SpongeBob SquarePants. Then drop on the deck and flop like a fish. SpongeBob SquarePants. Ready. SpongeBob SquarePants. SpongeBob SquarePants SpongeBob SquarePants SpongeBob SquarePants Aha ha  haha ha",
-        hotels: []
-        attractions: []
-        food: []
+        hotels: ["Fancy Hotel","Rock Bottom Motel"],
+        attractions: ["Jellyfish Fields","Goo Lagoon"],
+        food: ["Krusty Krab","Chum Bucket"],
     }
 ]
+
+
 console.log(locations)
 let continent = document.getElementById('continent')
 let country = document.getElementById('country')
