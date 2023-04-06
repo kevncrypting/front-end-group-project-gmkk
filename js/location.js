@@ -3,8 +3,8 @@ import API_TOKEN from "./config.js"
 
 const options = {method: 'GET', headers: {accept: 'application/json'}};
 
-fetch(`https://api.content.tripadvisor.com/api/v1/location/search?searchQuery=london&language=en&key=F8DA931BD63A4BAB806A9289206AA076`, options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err));
+fetch(`https://api.geoapify.com/v2/place-details?lat=33.755288239726966&lon=-84.39215801604593&apiKey=${API_TOKEN}`)
+.then(response => response.json())
+.then(result => console.log(result))
 
+.catch(error => console.log('error', error));
