@@ -41,4 +41,3 @@ let getCategory = (category) => { // created this function and substituted areas
 }
 
 // Goal is to have user able to input a location and display 5 hotels, attractions, and restaurants.
-
