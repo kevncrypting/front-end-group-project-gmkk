@@ -1,5 +1,4 @@
 # API key config
-config.js
 # Logs
 logs
 *.log
@@ -99,4 +98,3 @@ dist
 .pnp.*
 .DS_Store
 .vscode
-/js/config.js
