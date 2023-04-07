@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="./css/location.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Righteous&display=swap" rel="stylesheet">
+    <title>SuddenScapes | Location</title>
 </head>
 
 <body>
     <header>
-        <a href="./index.html"><h1>SuddenScapes</h1></a>
+        <a href="./index.html">
+            <h1>SuddenScapes</h1>
+        </a>
         <nav>
             <ul>
-                <a href="./index.html">
-                    <li>Home</li>
-                </a>
                 <a href="./quiz.html">
                     <li><button class="btn btn-quiz">Take the Quiz</button></li>
                 </a>
@@ -31,13 +33,13 @@
         </section>
 
         <section id="category-container">
-            <section id="entertainment">
+            <section id="entertainment" class="category">
                 <h3>Entertainment</h3>
             </section>
-            <section id="accommodation">
+            <section id="accommodation" class="category">
                 <h3>Accommodations</h3>
             </section>
-            <section id="catering">
+            <section id="catering" class="category">
                 <h3>Food</h3>
             </section>
         </section>
@@ -49,7 +51,7 @@
                     <label for="input-city">City Name:</label>
                     <input placeholder="Enter a city" type="text" name="inputCity" id="input-city">
                 </div>
-                <input type="submit" value="Check out a new Location">
+                <button type="submit" class="btn">Check out a new Location</button>
             </form>
         </section>
     </main>
