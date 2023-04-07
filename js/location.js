@@ -1,5 +1,57 @@
 import API_TOKEN from "./config.js" // practicing API_TOKEN security, though for presentation will be presenting from live server or removing config.js file from .gitignore list
 
+let locationsArray = [
+    {
+        location: "London, England",
+    },
+    {
+        location: "Capetown, South Africa",
+    },
+    {
+        location: "Atlanta, Georgia",
+    },
+    {
+        location: "Paris, France",
+    },
+    {
+        location: "Liverpool, England",
+    },
+    {
+        location: "Dallas, Texas",
+    },
+    {
+        location: "Savannah, Georgia",
+    },
+    {
+        location: "Nice, France",
+    },
+    {
+        location: "Berlin, Germany",
+    },
+    {
+        location: "Munich, Germany",
+    },
+    {
+        location: "Barcelona, Spain",
+    },
+    {
+        location: "Madrid, Spain",
+    },
+    {
+        location: "Lisbon, Portugal",
+    },
+    {
+        location: "Milan, Italy",
+    },
+    {
+        location: "Chicago, Illinois",
+    },
+    {
+        location: "Perth, Australia",
+    },
+];
+
+
 let cityInput = ``; // defines empty variable that will be populated after user inputs a city
 let cityPlaceID = ``; // defines empty variable that will be populated after user inputs a city
 
@@ -10,9 +62,35 @@ let cateringSection = document.getElementById('catering') // targets catering/fo
 let form = document.querySelector('form'); // targets form on page
 let inputCity = document.getElementById('input-city'); // targets input box on page
 let cityName = document.getElementById('city-name');
+let randomButton = document.getElementById('randomButton');
+
+randomButton.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    entertainmentSection.innerHTML = ``; // empties section before next selection
+    accommodationSection.innerHTML = ``;
+    cateringSection.innerHTML = ``;
+
+    let randomInteger = Math.floor(Math.random() * 16);
+    cityInput = locationsArray[randomInteger].location;
+
+    cityName.innerHTML = `${cityInput}`; // displays cityInput on page
+    getCityData(cityInput, API_TOKEN) // using the input city, creates a placeID for it and then populates the three category sections with the respective data
+        .then(() => {
+            getCategory('accommodation');
+            getCategory('entertainment');
+            getCategory('catering');
+        });
+    console.log(cityInput); // displays input to console to verify
+})
 
 form.addEventListener('submit', (event) => { // listens for submission of form
     event.preventDefault(); // prevents page refresh
+
+    entertainmentSection.innerHTML = ``; // empties section before next selection
+    accommodationSection.innerHTML = ``;
+    cateringSection.innerHTML = ``;
+
     cityInput = inputCity.value; // sets cityInput equal to the value of the input box
     cityName.innerHTML = `${cityInput}`; // displays cityInput on page
     getCityData(cityInput, API_TOKEN) // using the input city, creates a placeID for it and then populates the three category sections with the respective data

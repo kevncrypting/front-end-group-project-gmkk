@@ -1,31 +1,21 @@
-.row {
-    background-color:  rgba(251, 147, 0, .5);
-    }
-    
-    .cards{ 
-    width: 150x;
-    height: 300px;
-    border: solid 5px #FB9300; 
-    font-size: small;
-    
-    }
-    
 body {
     font-family: 'Noto Sans', sans-serif;
-    background-color: rgb(245, 230, 202);
-    color: rgb(52, 63, 86);
+    background-color: #b5e7ff;
+    color: #b5e7ff;
 }
 
 header {
+    background-color: #0160D6;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(251, 147, 0, .5);
-    padding: 20px;
+    padding: 1rem;
+    border-radius: 0.5rem;
 }
 
 h1 {
     font-family: 'Righteous', cursive;
+    color: white;
 }
 
 ul {
@@ -35,26 +25,60 @@ ul {
 }
 
 .btn {
-    background-color: rgb(245, 71, 72);
+    background-color: #AAB624;
     border-radius: 10px;
     padding: 10px;
+    border: none;
 }
 
-.btn-quiz {
-    font-size: 1rem;
+.btn:hover {
+    background-color: white
 }
 
 #hero {
     display: flex;
+    flex-direction: row;
 }
 
 img {
-    width: min(300px, 50%);
     border-radius: 10px;
 }
 
 section {
-    background-color: rgba(52, 63, 86, .2);
-    padding: 20px;
+    background-color: #0160D6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
     margin-top: 10px;
+}
+
+.card {
+    background-color: #0160D6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 10px;
+    border: 2px solid white;
+    max-width: 300px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 100px;
+    aspect-ratio: 1 / 1;
+}
+
+@media screen and (min-width:768px) {
+    #testimonials {
+        display: flex;
+        flex-direction: row;   
+    }
+
+    .card {
+        min-width: 150px;
+    }
 }

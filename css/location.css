@@ -1,17 +1,18 @@
 /* 
-rgb(245, 230, 202) - background color (tan)
-rgb(251, 147, 0) - accent #1 (orange)
-rgb(245, 71, 72) - accent #2 (red)
-rgb(52, 63, 86) - main text color (dark blue)
+Deep Sky Blue – #0160D6
+Surf Blue – #00AAF8
+Orange Red – #F13B13
+Lawn Green – #AAB624
+Faint Gray – #F0ECE9
 */
 body {
     font-family: 'Noto Sans', sans-serif;
-    background-color: rgb(245, 230, 202);
-    color: rgb(52, 63, 86);
+    background-color:  #b5e7ff;
+    color: #b5e7ff;
   }
 
 header {
-    background-color: rgba(251, 147, 0, .3);
+    background-color: #0160D6;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,31 +23,76 @@ header {
 main {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+}
+
+.quiz-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.quiz-container {
+    background-color: #0160D6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 10px;
+}
+
+.location-details {
+    background-color: #0160D6;
+    margin-top: 10px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+@media screen and (min-width:768px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .location-details {
+        max-width: 50%;
+    }
+
+    .category-container {
+        max-width: 50%;
+    }
 }
 
 a {
     text-decoration: none;
+    color: aliceblue;
 }
 
 #category-container {
-    background-color: rgba(251, 147, 0, .3);
     border-radius: 0.5rem;
-    padding: 0 0.25rem;
+    padding: 0.05rem 0.25rem;
+    max-width: 500px;
 }
 
 .category {
-    background-color: rgba(251, 147, 0, .4);
+    background-color: #00AAF8;
     border-radius: 0.5rem;
+    color: #003d88;
 }
 
 li:hover {
-    background-color: rgba(251, 147, 0, .3);
+    background-color: #0160D6;
+    color: white;
     font-weight: 700;
 }
 
 h1 {
     font-family: 'Righteous', cursive;
-    
+    color: white;
 }
 
 h3 {
@@ -63,16 +109,21 @@ ul {
 }
 
 li {
-    padding: 0.5rem 0;
+    padding: 0.5rem;
 }
 
 .btn {
-    background-color: rgb(245, 71, 72);
+    background-color: #AAB624;
     border-radius: 10px;
     padding: 10px;
     border: none;
 }
 
 .btn:hover {
-    background-color: rgba(245, 71, 72, 0.5);
+    background-color: white
+}
+
+form {
+    display: flex;
+    gap: 10px;
 }

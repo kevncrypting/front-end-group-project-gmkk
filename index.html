@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Righteous&display=swap"
+        rel="stylesheet">
     <title>SuddenScapes | Home</title>
 </head>
 
@@ -18,16 +19,13 @@
         <nav>
             <ul>
                 <a href="#site-preview">
-                    <li>Site Preview</li>
+                    <li><button class="btn">Site Preview</button></li>
                 </a>
                 <a href="#testimonials">
-                    <li>Testimonials</li>
+                    <li><button class="btn">Testimonials</button></li>
                 </a>
-                <a href="#editors-picks">
-                    <li>Editor's Picks</li>
-                </a>
-                <a href="quiz.html">
-                    <li><button class="btn btn-quiz">Take the Quiz</button></li>
+                <a href="location.html">
+                    <li><button class="btn">Take the Quiz</button></li>
                 </a>
             </ul>
         </nav>
@@ -37,39 +35,53 @@
             <div>
                 <h3>Find your next getaway</h3>
                 <p>Time is precious. Let us help you narrow down your options for your next weekend getaway.</p>
-                <a href="quiz.html">
-                    <button class="btn btn-quiz">Take the Quiz</button>
+                <a href="location.html">
+                    <button class="btn">Take the Quiz</button>
                 </a>
             </div>
-            <img src="./assets/placeholder-travel.jpg" alt="Placeholder Travel Image">
+            <!-- <img src="./assets/placeholder-travel.jpg" alt="Placeholder Travel Image"> -->
         </section>
         <section id="site-preview">
             <h3>Site Preview</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quibusdam aliquam inventore fuga porro
-                dicta perspiciatis quia nihil tempora quos odio corrupti, eius, distinctio error quaerat itaque
-                voluptatem atque reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quibusdam
-                aliquam inventore fuga porro dicta perspiciatis quia nihil tempora quos odio corrupti, eius, distinctio
-                error quaerat itaque voluptatem atque reiciendis.</p>
+            <img src="./assets/site-preview.png" alt="Preview of Site" width="400px">
         </section>
-        <!-- Mary is making cards for testimonials here -->
-        <section id="testimonials">
+        <section id="testimonial-section">
             <h3>Testimonials</h3>
-            <div class="cards"></div>
-            <div class="row"></div>
-            <div class="person"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quibusdam aliquam inventore fuga porro
-                dicta perspiciatis quia nihil tempora quos odio corrupti, eius, distinctio error quaerat itaque
-                voluptatem atque reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quibusdam
-                aliquam inventore fuga porro dicta perspiciatis quia nihil tempora quos odio corrupti, eius, distinctio
-                error quaerat itaque voluptatem atque reiciendis.</p>
-        </section>
-        <section id="editors-picks">
-            <h3>Editor's Picks</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quibusdam aliquam inventore fuga porro
-                dicta perspiciatis quia nihil tempora quos odio corrupti, eius, distinctio error quaerat itaque
-                voluptatem atque reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quibusdam
-                aliquam inventore fuga porro dicta perspiciatis quia nihil tempora quos odio corrupti, eius, distinctio
-                error quaerat itaque voluptatem atque reiciendis.</p>
+            <div id="testimonials">
+
+                <div class="card">
+                    <img src="./assets/lionsmane.jpeg" alt="Default Picture" class="profile-pic">
+                    <h3>Keith Black</h3>
+                    <span>Traveled to: New Orleans, Louisiana</span>
+                    <p>SuddenScapes was such a big help planning my trip to New Orleans! It gave me a concise list of
+                        recommendations to base my itinerary off of, and was exactly what I was looking for when
+                        planning my trip. Can't wait to use it for my next adventure!</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/lionsmane.jpeg" alt="Default Picture" class="profile-pic">
+                    <h3>Kevin Prachith</h3>
+                    <span>Traveled to: New York, New York</span>
+                    <p>Whatever API they used for that data, it was BUSSIN! The food recommendations were amazing, and I
+                        stayed at a very luxurious hotel that I would 100% go back and stay at again. Attractions were
+                        also on point - as the tour guide of the group everyone complimented my recommendations, but
+                        what they didn't know is that they all came from SuddenScapes... Shhhhhhh....</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/lionsmane.jpeg" alt="Default Picture" class="profile-pic">
+                    <h3>Giovanny Farajallah</h3>
+                    <span>Traveled to: Mobile, Alabama</span>
+                    <p>Check out the video of my <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">trip</a>.
+                        Couldn't have done it without SuddenScapes - 10/10 would recommend</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/lionsmane.jpeg" alt="Default Picture" class="profile-pic">
+                    <h3>Mary Fuller</h3>
+                    <span>Traveled to: Chicago</span>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati doloribus tempora, atque
+                        repellendus maxime praesentium et quo! Iure quidem deserunt delectus ratione necessitatibus ex
+                        explicabo omnis. Sequi ipsum aperiam assumenda?</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
