@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./css/location.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Righteous&display=swap"
+        rel="stylesheet">
     <title>SuddenScapes | Location</title>
 </head>
 
@@ -20,40 +21,77 @@
         <nav>
             <ul>
                 <a href="./quiz.html">
-                    <li><button class="btn btn-quiz">Take the Quiz</button></li>
+                    <li><button class="btn">Take the Quiz</button></li>
                 </a>
             </ul>
         </nav>
     </header>
     <!-- replaced div with ID of main-display with main as a more semantic way to reference the main section without having to use an ID -->
     <main>
+        <section class="quiz-container">
+            <h2>Take our Location Quiz!</h2>
+            <span>Get one step closer to making new memories</span> <br>
+            <section class="quiz-section">
+
+                <label for="continent">What continent would you like to see?</label>
+                <input type="text" id="continent">
+                
+                <label for="country">Is there a country you want to see in particular?</label>
+                <select name="country" id="country">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                
+                <label for="weather">Do you like warm or cold weather?</label>
+                <select name="weather" id="weather">
+                    <option value="warm">Warm</option>
+                    <option value="cold">Cold</option>
+                </select>
+                
+                <label for="geography">City, Beach, or Mountains?</label>
+                <select name="geography" id="geography">
+                    <option value="city">City</option>
+                    <option value="beach">Beach</option>
+                    <option value="mountains">Mountains</option>
+                </select>
+            
+                <label for="lionsmane">Are you a Lionsmane connoisseur? </label>
+                <select name="lionsmane" id="lionsmane">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <button type="submit" id="randomButton" class="btn">Submit</button>
+            </section>
+
+            <section>
+                <h2>Explore a new city</h2>
+                <form>
+                    <div>
+                        <label for="input-city">City Name:</label>
+                        <input placeholder="Enter a city" type="text" name="inputCity" id="input-city">
+                    </div>
+                    <button type="submit" class="btn">Check out a new Location</button>
+                </form>
+            </section>
+
+        </section>
         <section class="location-details">
             <h2>Currently exploring...</h2>
             <h3 id="city-name"></h3>
-        </section>
 
-        <section id="category-container">
-            <section id="entertainment" class="category">
+            <section id="category-container">
                 <h3>Entertainment</h3>
-            </section>
-            <section id="accommodation" class="category">
+                <section id="entertainment" class="category">
+                </section>
                 <h3>Accommodations</h3>
-            </section>
-            <section id="catering" class="category">
+                <section id="accommodation" class="category">
+                </section>
                 <h3>Food</h3>
+                <section id="catering" class="category">
+                </section>
             </section>
         </section>
 
-        <section>
-            <h2>Explore a new city</h2>
-            <form>
-                <div>
-                    <label for="input-city">City Name:</label>
-                    <input placeholder="Enter a city" type="text" name="inputCity" id="input-city">
-                </div>
-                <button type="submit" class="btn">Check out a new Location</button>
-            </form>
-        </section>
     </main>
     <script type="module" src="./js/location.js"></script>
 </body>
