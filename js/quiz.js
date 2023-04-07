@@ -13,23 +13,23 @@ let locations = [
     {
         location: "Danakil Desert, Ethiopia",
         description: "The hottest place on earth, the Danakil Desert in Ethiopia is one of the driest and lowest places on the planet that looks like an alien land. One can witness volcanoes oozing out lava, multiple hues of hydrothermal fields, and massive salt pans that leave you stupefied. Covered with more than 10 lakh tonnes of salt, this deadly desert lies at the northern end of the Great Rift Valley that is separated by live volcanoes from the Red Sea. Exploring this hair-raising region requires driving for hours on bumpy, dusty dirt roads that begin starting from Mekele. The barren land is home to many active volcanoes that spew toxic gases.",
-        hotels: ["Doho Lodge & Hot Springs","Kuriftu Resort & Spa Awash Falls"],
-        attractions: ["3 Days Danakil Depression Tour","Dalol tours"],
-        food: ["Kategna Restaurant","The Kitchen"],
+        hotels: ["Doho Lodge & Hot Springs", "Kuriftu Resort & Spa Awash Falls"],
+        attractions: ["3 Days Danakil Depression Tour", "Dalol tours"],
+        food: ["Kategna Restaurant", "The Kitchen"],
     },
     {
         location: "Lionsmane Village, Lionmania",
         description: "The Utopia",
-        hotels: ["Mushroom Hotel","Luigi Mansion"],
-        attractions: ["Road to Nueroplasticity","My affiliate link"],
-        food: ["Lionsmane Burger","Lionsmane Chicken Nuggets"],
+        hotels: ["Mushroom Hotel", "Luigi Mansion"],
+        attractions: ["Road to Nueroplasticity", "My affiliate link"],
+        food: ["Lionsmane Burger", "Lionsmane Chicken Nuggets"],
     },
     {
         location: "27.486786, -175.930167",
         description: "Are you ready, kids. Aye aye Captain. I can't hear you. Aye aye Captain. Ohhhh Who lives in a pineapple under the sea. SpongeBob SquarePants. Absorbant and yellow and porous is he. SpongeBob SquarePants. If nautical nonsense be something you wish. SpongeBob SquarePants. Then drop on the deck and flop like a fish. SpongeBob SquarePants. Ready. SpongeBob SquarePants. SpongeBob SquarePants SpongeBob SquarePants SpongeBob SquarePants Aha ha  haha ha",
-        hotels: ["Fancy Hotel","Rock Bottom Motel"],
-        attractions: ["Jellyfish Fields","Goo Lagoon"],
-        food: ["Krusty Krab","Chum Bucket"],
+        hotels: ["Fancy Hotel", "Rock Bottom Motel"],
+        attractions: ["Jellyfish Fields", "Goo Lagoon"],
+        food: ["Krusty Krab", "Chum Bucket"],
     }
 ]
 
@@ -42,13 +42,23 @@ let geography = document.getElementById('geography')
 let lionsmane = document.getElementById('lionsmane')
 let btn1 = document.getElementById('btn1')
 
-btn1.addEventListener
+btn1.addEventListener("click", function () {
+    locations.Math.floor(location => {
+        let locationHolder = document.createElement('div')
+        locationHolder.setAttribute('class', 'location')
+        questionSection.appendChild(locationHolder)
+        locationHolder.innerHTML = location.location
+        });
+    }
+    )
 
+// click button, takes to locations page
 
+btn1.addEventListener("click", () => {
+    
+})
 
-
-
-
+// locations page should be populated with a random location's information
 
 
 
