@@ -1,70 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="./css/location.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Righteous&display=swap" rel="stylesheet">
+    <title>SuddenScapes | Location</title>
 </head>
+
 <body>
     <header>
-        <h1>SuddenScapes</h1>
+        <a href="./index.html">
+            <h1>SuddenScapes</h1>
+        </a>
         <nav>
             <ul>
-                <a href="#site-preview">
-                    <li>Site Preview</li>
-                </a>
-                <a href="#testimonials">
-                    <li>Testimonials</li>
-                </a>
-                <a href="#editors-picks">
-                    <li>Editor's Picks</li>
-                </a>
-                <a href="quiz.html">
+                <a href="./quiz.html">
                     <li><button class="btn btn-quiz">Take the Quiz</button></li>
                 </a>
             </ul>
         </nav>
     </header>
-   <div class="main-display">
-        <section id="category-container">
-            <section id="entertainment">
-                <h3>Entertainment Options</h3>
-            </section>
-            <section id="accommodation">
-                <h3>Accommodations Options</h3>
-            </section>
-            <section id="catering">
-                <h3>Food Options</h3>
-            </section>
+    <!-- replaced div with ID of main-display with main as a more semantic way to reference the main section without having to use an ID -->
+    <main>
+        <section class="location-details">
+            <h2>Currently exploring...</h2>
+            <h3 id="city-name"></h3>
         </section>
 
-
-
-
-
-
+        <section id="category-container">
+            <section id="entertainment" class="category">
+                <h3>Entertainment</h3>
+            </section>
+            <section id="accommodation" class="category">
+                <h3>Accommodations</h3>
+            </section>
+            <section id="catering" class="category">
+                <h3>Food</h3>
+            </section>
+        </section>
 
         <section>
-            <h3 id="city-name"></h3>
+            <h2>Explore a new city</h2>
             <form>
-                <label for="input-city">City Name:</label>
-                <input placeholder="Enter a city" type="text" name="inputCity" id="input-city">
-                <input type="submit" value="Check out a new Location">
-            </form>
-            <article class="images">
-                <img src="https://unsplash.it/530/530"  alt="">
-                <div class="smaller-images">
-                    <img src="https://unsplash.it/250/250"  alt="">
-                
-                    <img src="https://unsplash.it/250/250"  alt="">
+                <div>
+                    <label for="input-city">City Name:</label>
+                    <input placeholder="Enter a city" type="text" name="inputCity" id="input-city">
                 </div>
-            </article>
-    
+                <button type="submit" class="btn">Check out a new Location</button>
+            </form>
         </section>
-    </div>
-    <!-- <script type="module" src="./js/config.js"></script> -->
+    </main>
     <script type="module" src="./js/location.js"></script>
 </body>
+
 </html>
