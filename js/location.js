@@ -1,18 +1,21 @@
-import API_TOKEN from "./config.js"
+import API_TOKEN from "./config.js" // practicing API_TOKEN security, though for presentation will be presenting from live server or removing config.js file from .gitignore list
 
-// const options = { method: 'GET', headers: { accept: 'application/json' } };
+let cityInput = ``; // defines empty variable that will be populated after user inputs a city
+let cityPlaceID = ``; // defines empty variable that will be populated after user inputs a city
+
+let entertainmentSection = document.getElementById('entertainment') // targets entertainment section on page
+let accommodationSection = document.getElementById('accommodation') // targets accommodation section on page
+let cateringSection = document.getElementById('catering') // targets catering/food section on page
 
 let form = document.querySelector('form'); // targets form on page
 let inputCity = document.getElementById('input-city'); // targets input box on page
 let cityName = document.getElementById('city-name');
 
-let cityInput = ``; // defines empty variable that will be populated after user inputs a city
-let cityPlaceID = ``; // defines empty variable that will be populated after user inputs a city
-
 form.addEventListener('submit', (event) => { // listens for submission of form
     event.preventDefault(); // prevents page refresh
     cityInput = inputCity.value; // sets cityInput equal to the value of the input box
-    getCityData(cityInput, API_TOKEN)
+    cityName.innerHTML = `${cityInput}`; // displays cityInput on page
+    getCityData(cityInput, API_TOKEN) // using the input city, creates a placeID for it and then populates the three category sections with the respective data
         .then(() => {
             getCategory('accommodation');
             getCategory('entertainment');
@@ -32,13 +35,7 @@ function getCityData(city, apiKey) { // found this function in a tutorial on the
         });
 }
 
-let categoryContainer = document.getElementById('category-container')
-
-let entertainmentSection = document.getElementById('entertainment')
-let accommodationSection = document.getElementById('accommodation')
-let cateringSection = document.getElementById('catering')
-
-let getCategory = (category) => { // created this function and substituted areas in fetch URL with variables that accomplish what we are looking to populate on the page
+async function getCategory(category) { // created this function and substituted areas in fetch URL with variables that accomplish what we are looking to populate on the page
     fetch(`https://api.geoapify.com/v2/places?categories=${category}&filter=place:${cityPlaceID}&limit=5&apiKey=${API_TOKEN}`)
         .then(data => data.json())
         .then(result => {
@@ -46,7 +43,7 @@ let getCategory = (category) => { // created this function and substituted areas
             let categoryUnorderedList = document.createElement('ul'); // creates a variable called categoryUnorderedList that references a new ul element
 
             let namesArray = []; // creates an empty array that will be populated with the names of the following forEach
-            
+
             result.features.forEach(result => { // accessing the features property of each result, then pushing the name property into the namesArray
                 namesArray.push(result.properties.name) // pushing the name of each place into the empty namesArray
             })
